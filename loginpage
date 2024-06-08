@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sign-in page</title>
+</head>
+<body>
+    <form  method="post">
+        <fieldset>
+            <legend>Login Page</legend>
+            <table>
+                <tr>
+                    <td><label>Enter UserName:</label></td>
+                    <td><input type="text" name="textusrNam"></td>
+                </tr>
+                <tr>
+                    <td><label>Enter Password:</label></td>
+                    <td><input type="password" name="txtpwd"></td>
+    
+                </tr>
+                <tr>
+                    <td><input type="button" value="submit" onclick ="validatelogindetails()">log in</td>
+                    <td><input type="reset" value="clear"></td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <a href="LoginDetails.html">sign-up</a>
+                    </td>
+                </tr>
+             </table>
+        </fieldset>
+    </form>
+</body>
+<script type="text/javascript">
+    function validatelogindetails() {
+        // body...
+        var usrName=document.getElementsByName('textusrNam').value;
+        var usrPwd=document.getElementsByName('txtpwd').value;
+        if(usrName !=" " &&  usrPwd != " "){
+        if(usrName == 'abc' && usrPwd == 123){
+            window.location.assign("Mainpageframes.html");
+            alert("succesfully logined");
+            
+        }
+        else{
+            alert("please verify user name or password");
+        }
+        }
+        else{
+            alert("please verify the values of user name and password");
+        }
+
+
+    }
+</script>
+   
+   
+
+</html>
